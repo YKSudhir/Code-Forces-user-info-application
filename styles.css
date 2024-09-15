@@ -1,0 +1,55 @@
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* User Info Card styling */
+.user-info-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-info-card img.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.user-info-card h2 {
+  margin-top: 10px;
+  color: #333;
+  font-size: 24px;
+}
+
+.user-info-card p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.user-info-card p strong {
+  color: #333;
+}
+
+/* Loading and error styling */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+pre.loading {
+  color: blue;
+}
+
+pre.error {
+  color: red;
+}

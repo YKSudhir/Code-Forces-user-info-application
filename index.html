@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codeforces API</title>
+    <style>
+      /* Container styling */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Heading styling */
+      h1 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 22px;
+        color: #444;
+        margin-bottom: 10px;
+      }
+
+      /* Input and button styling */
+      label {
+        font-size: 16px;
+        margin-right: 8px;
+      }
+
+      input[type="text"] {
+        padding: 8px;
+        margin-bottom: 12px;
+        width: 80%;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="checkbox"] {
+        margin-left: 8px;
+        transform: scale(1.2);
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+
+      /* User info card styling */
+      .user-info-card {
+        border: 1px solid #ddd;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      .user-info-card img.avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+        margin-bottom: 10px;
+      }
+
+      .user-info-card h2 {
+        font-size: 24px;
+        color: #333;
+        margin: 0 0 10px 0;
+      }
+
+      .user-info-card p {
+        font-size: 16px;
+        color: #555;
+        margin: 5px 0;
+      }
+
+      .user-info-card p strong {
+        color: #333;
+      }
+
+      /* Loading and error styling */
+      pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        text-align: left;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 4px;
+        margin-top: 15px;
+      }
+
+      pre.loading {
+        color: blue;
+      }
+
+      pre.error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Codeforces API Data Fetcher</h1>
+
+      <!-- User Friends -->
+      <!-- <section id="userFriendsSection">
+        <h2>Get User Friends</h2>
+        <label for="handle">User Handle (ID):</label>
+        <input
+          type="text"
+          id="handle"
+          placeholder="Enter user handle (e.g. kaam09)"
+        />
+        <label for="onlyOnline">Only Online:</label>
+        <input type="checkbox" id="onlyOnline" />
+        <button onclick="fetchUserFriends()">Get Friends</button>
+        <pre id="userFriendsData" class="loading"></pre>
+      </section> -->
+
+      <!-- User Info -->
+      <section id="userInfoSection">
+        <h2>Get User Info</h2>
+        <label for="userHandles">User Handles (Semicolon-separated):</label>
+        <input
+          type="text"
+          id="userHandles"
+          placeholder="Enter user handles (e.g. DmitriyH;Fefer_Ivan)"
+        />
+        <label for="checkHistoricHandles">Check Historic Handles:</label>
+        <input type="checkbox" id="checkHistoricHandles" checked />
+        <button onclick="fetchUserInfo()">Get User Info</button>
+        <pre id="userInfoData" class="loading"></pre>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
